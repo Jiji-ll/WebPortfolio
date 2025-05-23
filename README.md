@@ -7,4 +7,4 @@ INTERACTIVE CONPONENSTS:
 -Reveal Animation
 
 link for the Portfolio
--
+-https://jiji-ll.github.io/WebPortfolio/
