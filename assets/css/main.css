@@ -20,6 +20,11 @@ body {
     background-color: var(--background-color);
 }
 
+.reveal {
+    position: relative;
+    overflow: hidden;
+}
+
 .reveal::before {
     content: '';
     position: absolute;
@@ -28,7 +33,9 @@ body {
     width: 100%;
     height: 100%;
     background: var(--background-color);
-    animation: showRight 1.50s ease forwards;
+    animation: showRight 1.5s ease forwards;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .header {
@@ -505,10 +512,8 @@ body {
 }
 
 @keyframes showRight {
-    100% {
-        width: 0;
-    }
-    
+    0% { width: 100%; right: 0; }
+    100% { width: 0; right: 0; }
 }
 
 @media (max-width: 600px) {
