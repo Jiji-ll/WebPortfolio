@@ -31,8 +31,6 @@ body {
     animation: showRight 1.50s ease forwards;
 }
 
-
-
 .header {
     position: fixed;
     top: 0;
@@ -74,11 +72,10 @@ body {
     text-decoration: underline;
 }
 
-
-
 .home {
-    height: 100vh;
     display: flex;
+    justify-content: center;
+    height: 100vh;
     align-items: center;
     padding: 0 10%;
 }
@@ -318,18 +315,20 @@ body {
 }
 
 .training-item h3 {
-    margin: 50px 0 6px 55vh;
+    margin: 24px 0 12px 0;
     color: var(--primary-color);
     font-size: 28px;
     font-weight: 700;
     line-height: 1.2;
+    text-align: center;
 }
 
 .training-item p {
-    margin: 0 0 4px 55vh;
+    margin: 0 0 12px 0;
     color: var(--secondary-color);
     font-size: 17px;
     line-height: 1.5;
+    text-align: center;
 }
 
 .pro-sec > h2 {
@@ -347,8 +346,8 @@ body {
 .project-item h3,
 .project-item p,
 .project-item a {
-    margin-left: 0; 
-    text-align: left;
+    margin-left: 0 !important;
+    text-align: center;
 }
 
 .project-item h3 {
@@ -441,11 +440,11 @@ body {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 5vh 0 0 0;
+    align-items: center;
+    gap: 24px;
     width: 400px;
+    margin: 5vh 0 0 0;
     background-color: transparent;
-    display: flex;
-    justify-content: space-between;
 }
 
 .con-sec-item::before {
@@ -459,7 +458,7 @@ body {
     background: var(--background-color);
     animation: showRight 1s ease forwards;
     animation-delay: .3s;
-    z-index: 3; 
+    z-index: 0;
     pointer-events: none;
 }
 
@@ -476,7 +475,7 @@ body {
     font-size: 20px;
     color: var(--secondary-color);
     text-decoration: none;
-    z-index: 5;
+    z-index: 2;
     overflow: hidden;
     transition: .5s;
 }
@@ -495,7 +494,6 @@ body {
     background-color: var(--secondary-color);
     z-index: -1;
     transition: .5s;
-    pointer-events: none;
 }
 
 .con-sec-item a:hover::before {
@@ -511,4 +509,31 @@ body {
         width: 0;
     }
     
+}
+
+@media (max-width: 600px) {
+    .con-sec-item {
+        width: 100%;
+        max-width: 320px;
+        margin: 3vh auto 0 auto;
+        gap: 16px;
+    }
+    .con-sec > h2 {
+        font-size: 18px;
+        padding: 2px 2%;
+    }
+    .con-sec {
+        padding: 5px 0 2vh 0;
+        margin: 10vh 0 0 0;
+    }
+    .pro-sec > h2,
+    .tra-sec > h2,
+    .edu-sec > h2 {
+        font-size: 28px;
+        padding: 10px 2%;
+    }
+    .project-item {
+        padding: 16px 8px;
+        max-width: 98vw;
+    }
 }
